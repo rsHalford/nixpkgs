@@ -12,6 +12,8 @@ buildPythonPackage rec {
   pname = "backports-zoneinfo";
   version = "0.2.1";
 
+  disabled = pythonOlder "3.9";
+
   src = fetchFromGitHub {
     owner = "pganssle";
     repo = "zoneinfo";
